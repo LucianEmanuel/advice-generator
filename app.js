@@ -10,6 +10,7 @@ async function getApi(url, para1, para2) {
   para1.textContent = `Advice #"${data.slip.id}"`;
   para2.textContent = `"${data.slip.advice}"`;
 }
+window.addEventListener('load', getApi(apiUrl, id, advice));
 btn.addEventListener('click', e => {
   e.preventDefault();
   getApi(apiUrl, id, advice);
